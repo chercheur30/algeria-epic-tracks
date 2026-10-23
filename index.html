@@ -3,64 +3,252 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Algeria Epic Tracks - Voyages à moto en Algérie</title>
+<!--<title>Algeria Epic Tracks - Voyages à moto en Algérie</title> -->
 <style>
 :root{--orange:#f4a62a;--orange-dark:#dc8b13;--blue:#173b4d;--blue-dark:#102d3b;--white:#fff;--light:#f4f4f4;--text:#333}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}a{text-decoration:none;color:inherit}.container{width:92%;max-width:1180px;margin:auto}
-#site-top{position:fixed;top:0;left:0;width:100%;z-index:100;box-shadow:0 2px 6px #00000010}.top-header{background:var(--orange);color:#fff;padding:8px 0;font-size:13px}.top-header .container{display:flex;justify-content:flex-end;gap:25px;flex-wrap:wrap}.header{background:var(--orange);padding:18px 0 22px;color:#fff}.header-content{display:flex;align-items:center;justify-content:space-between}.logo{font-family:Georgia,serif;font-size:34px;font-weight:bold;letter-spacing:-2px}.logo span{color:var(--blue)}.logo-small{display:block;font-size:11px;letter-spacing:1px;margin-top:2px}.navbar{background:#fff;border-bottom:1px solid #ddd;box-shadow:0 2px 5px #0000000d}.nav{display:flex;justify-content:center;flex-wrap:wrap}.nav a{display:block;padding:15px 18px;font-size:13px;color:#333;transition:.2s}.nav a:hover,.nav a.active{background:var(--orange);color:#fff}.nav-item{position:relative}.dropdown{display:none;position:absolute;top:100%;left:0;min-width:270px;background:#fff;box-shadow:0 4px 10px #0003;z-index:50}.nav-item:hover .dropdown,.nav-item:focus-within .dropdown{display:block}.dropdown a{padding:12px 16px;font-size:12px;white-space:normal}
+#site-top{position:fixed;top:0;left:0;width:100%;z-index:100;box-shadow:0 2px 6px #00000010} .top-header{background:#E99F02;color:#fff;padding:4px 0;font-size:13px}.top-header .container{display:flex;justify-content:flex-end;gap:25px;flex-wrap:wrap}
+
+
+
+.header {
+  background: #E99F02;
+  padding: 0;
+  color: var(--blue);
+  width: 100%;
+  overflow: hidden;  
+  margin-top: 0.3px;
+}
+
+
+.header-image {
+  display: block;
+  width: 100%;
+  height: auto;  
+}
+
+
+/*
+.header-image {
+  display: block;
+  width: 100%;
+  height: 18px;
+  object-fit: cover;
+  object-position: center;
+}
+*/
+
+
+
+/*.header{background:#E59A00;padding:18px 0 22px;color:#fff}*/
+
+/*<!--.header{background:var(--orange);padding:18px 0 22px;color:#fff}.header-content{display:flex;align-items:center;justify-content:space-between}.logo{font-family:Georgia,serif;font-size:34px;font-weight:bold;letter-spacing:-2px}.logo span{color:var(--blue)}.logo-small{display:block;font-size:11px;letter-spacing:1px;margin-top:2px} -->*/
+.navbar{background:#fff;border-bottom:1px solid #ddd;box-shadow:0 2px 5px #0000000d}.nav{display:flex;justify-content:center;flex-wrap:wrap}.nav a{display:block;padding:15px 18px;font-size:13px;color:#333;transition:.2s}.nav a:hover,.nav a.active{background:var(--orange);color:#fff}.nav-item{position:relative}.dropdown{display:none;position:absolute;top:100%;left:0;min-width:270px;background:#fff;box-shadow:0 4px 10px #0003;z-index:50}.nav-item:hover .dropdown,.nav-item:focus-within .dropdown{display:block}.dropdown a{padding:12px 16px;font-size:12px;white-space:normal}
+
 .hero{height:620px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#344a51}.hero-slides,.hero-slide{position:absolute;inset:0}.hero-slide{background-size:cover;background-position:center;opacity:0;transform:scale(1.04);transition:opacity 1.2s,transform 6s}.hero-slide.active{opacity:1;transform:scale(1)}.hero-slides:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0008,#0002);pointer-events:none}.hero-content{position:relative;z-index:5;background:#0005;padding:30px 45px;text-align:center;color:#fff;max-width:700px;border-radius:5px}.hero-eyebrow{font-size:13px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin-bottom:15px;color:var(--orange)}.hero h1{font-family:Georgia,serif;font-size:46px;line-height:1.1;margin-bottom:15px;text-shadow:0 2px 5px #0008}.hero h1 span{color:var(--orange)}.hero-description{font-size:17px;line-height:1.6;margin-bottom:25px;text-shadow:0 1px 4px #000b}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.btn{display:inline-block;padding:12px 22px;font-size:13px;font-weight:bold;transition:.25s;border-radius:3px}.btn-primary,.card-button{background:var(--orange);color:#fff}.btn-primary:hover,.card-button:hover{background:var(--orange-dark);transform:translateY(-2px)}.btn-outline{border:1px solid #fff;color:#fff;background:#0003}.btn-outline:hover{background:#fff;color:var(--blue)}.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:48px;height:48px;border-radius:50%;border:1px solid #ffffffb3;background:#0004;color:#fff;font-size:20px;cursor:pointer}.hero-prev{left:25px}.hero-next{right:25px}.hero-dots{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:10px}.hero-dot{width:12px;height:12px;padding:0;border:2px solid #fff;border-radius:50%;background:transparent;cursor:pointer}.hero-dot.active{background:var(--orange);border-color:var(--orange)}
 .intro{padding:55px 0;text-align:center}.intro h2,.section-title h2{color:var(--blue);font-size:30px;margin-bottom:15px}.intro p{max-width:760px;margin:auto;line-height:1.7;color:#666}.cards{background:#f4f4f4;padding:50px 0}.cards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.card{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 3px 10px #0000001f;transition:transform .2s}.card:hover{transform:translateY(-5px)}.card-image{height:180px;background:linear-gradient(135deg,#bd5729,#e5a04b,#41575a);display:flex;align-items:center;justify-content:center;color:#fff;font-size:45px}.card-content{padding:22px}.card h3{color:var(--blue);margin-bottom:10px}.card p{color:#666;line-height:1.6;font-size:14px}.card-button{display:inline-block;margin-top:15px;padding:10px 18px;font-size:13px;font-weight:bold;border-radius:3px}.destinations{padding:60px 0}.section-title{text-align:center;margin-bottom:35px}.section-title p{margin-top:8px;color:#777}.destination-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.destination{height:180px;position:relative;overflow:hidden;display:flex;align-items:flex-end;background:linear-gradient(135deg,#a64e29,#df9a4d,#334a51)}.destination div{width:100%;padding:15px;color:#fff;background:linear-gradient(transparent,#000c)}.destination h3{font-size:18px}.destination p{font-size:12px;margin-top:4px}
 footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}footer h3{color:var(--orange);margin-bottom:18px}footer ul{list-style:none}footer li{margin-bottom:10px;font-size:13px;color:#d6dfe3}footer p{font-size:13px;line-height:1.7;color:#d6dfe3}.footer-bottom{border-top:1px solid #ffffff26;margin-top:35px;padding-top:18px;text-align:center;font-size:12px;color:#aebbc0}
 .route-page{display:none}.route-page.show{display:block}.route-title{background:#eceff1;padding:30px 0 20px;box-shadow:inset 0 8px 8px -8px #0002}.route-title h1{font-size:30px;color:#56616a;margin:0 0 8px}.crumbs{font-size:13px;color:#666}.crumbs a{color:var(--orange-dark)}.listing-intro{padding:38px 0 22px;text-align:center}.listing-intro p{max-width:760px;margin:auto;color:#666;line-height:1.7}.circuit-list{padding:15px 0 60px}.circuit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.circuit-card{background:#fff;border:1px solid #e4e7e8;border-radius:7px;overflow:hidden;box-shadow:0 4px 15px #102d3b10;transition:transform .2s}.circuit-card:hover{transform:translateY(-4px)}.circuit-visual{height:145px;background:linear-gradient(135deg,#9b512f,#e6aa58,#31515c);display:flex;align-items:center;justify-content:center;font-size:42px;color:#fff}.circuit-content{padding:23px}.circuit-content .tag{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#b36d08;font-weight:bold;margin-bottom:9px}.circuit-content h2{color:var(--blue);font-size:22px;margin-bottom:10px}.circuit-content p{color:#666;font-size:14px;line-height:1.65;margin-bottom:18px}.route-body{padding:35px 0 20px}.route-body img{display:block;width:100%;max-height:300px;object-fit:cover;margin:0 auto 22px}.route-body p{line-height:1.7;color:#555}.route-tabs{display:flex;justify-content:center;flex-wrap:wrap;background:#363b44}.route-tabs button{background:none;border:0;border-right:1px solid #ffffff30;color:#bbb;padding:15px 30px;font-size:14px;cursor:pointer}.route-tabs button.active,.route-tabs button:hover{color:#fff;background:#26313a}.route-panel{display:none;padding:30px 0 45px}.route-panel.active{display:block}.route-desc{padding:15px 0 55px}.route-desc h2{font-size:26px;color:#555;margin:0 0 20px}.route-desc h3{font-size:20px;color:var(--orange-dark);margin:25px 0 10px}.route-desc p{line-height:1.7;margin-bottom:12px}.route-page table{width:100%;border-collapse:collapse;margin:15px 0 25px}.route-page th,.route-page td{border:1px solid #ddd;text-align:center;padding:9px;font-size:12px;color:#666}.route-page th{background:#eee}.route-page .destination-grid img{width:100%;height:180px;object-fit:cover} 
 @media(max-width:800px){.top-header{display:none}.header{padding:9px 0 12px}.logo{font-size:27px}.nav a{padding:11px 9px;font-size:12px}.hero{height:530px}.hero h1{font-size:36px}.hero-content{width:86%;padding:25px}.cards-grid,.footer-grid{grid-template-columns:1fr}.destination-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.circuit-grid{grid-template-columns:1fr}.route-tabs button{padding:13px 14px}}
 @media(max-width:500px){.logo{font-size:24px}.hero{height:490px}.hero h1{font-size:30px}.hero-description{font-size:15px}.hero-content{width:90%;padding:22px 18px}.hero-arrow{width:40px;height:40px}.hero-prev{left:10px}.hero-next{right:10px}.destination-grid{grid-template-columns:1fr}.route-title h1{font-size:25px}}
-/* Photos du circuit Grande Kabylie */
-/* Galerie photos - Grande Kabylie */
-
 
 
 
 </style>
 </head>
 <body>
-<div id="site-top">
+ <div id="site-top">
   <div class="top-header"><div class="container"><span>📧 contact@algeriaepictracks.com</span><span>📞 +33 6 00 00 00 00</span></div></div>
-  <header class="header"><div class="container header-content"><div><div class="logo">Algeria<span> Epic Tracks</span></div><div class="logo-small">L'Algérie à Moto</div></div></div></header>
+<!--  <header class="header"><div class="container header-content"><div><div class="logo">Algeria<span> Epic Tracks</span></div><div class="logo-small">L'Algérie à Moto</div></div></div></header>  -->
+  
+
+<header class="header">
+  <img
+    src="images/entete-algeria3.jpg"
+    alt="Algeria Epic Tracks - L'Algérie à Moto"
+    class="header-image"
+  >
+</header>
+
+
   <nav class="navbar"><div class="container nav">
     <a href="#accueil">ACCUEIL</a><a href="#equipe">NOTRE ÉQUIPE</a>
     <div class="nav-item"><a href="#pistes">PISTES</a><div class="dropdown"><a href="#piste-nord-est">2 JOURS : LA BOUCLE DES BABORS</a></div></div>
     <div class="nav-item"><a href="#routes">ROUTES</a><div class="dropdown"><a href="#route-nord-imperial">10 JOURS : LE CONSTANTINOIS</a><a href="#route-grandekabylie">4 JOURS : LA BOUCLE DE LA GRANDE KABYLIE</a><a href="#route-auresahara">7 JOURS : AURÈSAHARA</a></div></div>
+    <a href="#voiture">VOYAGES EN 4*4</a>
     <a href="#contact">CONTACT</a>
   </div></nav>
 </div>
 
 <section class="hero home-section" id="accueil">
-  <div class="hero-slides"><div class="hero-slide active" style="background-image:url('images/Aures1.jpg')"></div><div class="hero-slide" style="background-image:url('images/Aures11.png')"></div><div class="hero-slide" style="background-image:url('images/babors2.png')"></div><div class="hero-slide" style="background-image:url('images/tassili.jpg')"></div><div class="hero-slide" style="background-image:url('images/constantine.jpg')"></div></div>
-  <div class="container"><div class="hero-content"><div class="hero-eyebrow">Voyages à moto en Algérie</div><h1>L'Algérie<br><span>à moto</span></h1><p class="hero-description">Découvrez l'Algérie à moto, de la Méditerranée aux Aurès, des Hauts-Plateaux jusqu'au Sahara à travers les routes et les pistes les plus épiques.</p><div class="buttons"><a href="#destinations" class="btn btn-primary">Explorer les destinations</a><a href="#routes" class="btn btn-outline">Voir les routes</a></div></div></div>
+  <div class="hero-slides"><div class="hero-slide active" style="background-image:url('images/Aures1.jpg')"></div><div class="hero-slide" style="background-image:url('images/Aures11.png')"></div><div class="hero-slide" style="background-image:url('images/babors2.png')"></div><div class="hero-slide" style="background-image:url('images/sah1.jpg')"></div><div class="hero-slide" style="background-image:url('images/constantine.jpg')"></div></div>
+  <div class="container"><div class="hero-content"><div class="hero-eyebrow">Voyages à moto en Algérie</div><h1>L'Algérie<br><span>à moto</span></h1><p class="hero-description">Découvrez l'Algérie à moto, de la Méditerranée aux Aurès, des Hauts-Plateaux jusqu'au Sahara à travers les routes et les pistes les plus épiques.</p><div class="buttons"><a href="#pistes" class="btn btn-primary">Explorer les pistes</a><a href="#routes" class="btn btn-outline">Voir les routes</a></div></div></div>
   <button class="hero-arrow hero-prev" aria-label="Photo précédente">❮</button><button class="hero-arrow hero-next" aria-label="Photo suivante">❯</button>
   <div class="hero-dots"><button class="hero-dot active" data-slide="0" aria-label="Photo 1"></button><button class="hero-dot" data-slide="1" aria-label="Photo 2"></button><button class="hero-dot" data-slide="2" aria-label="Photo 3"></button><button class="hero-dot" data-slide="3" aria-label="Photo 4"></button><button class="hero-dot" data-slide="4" aria-label="Photo 5"></button></div>
 </section>
 <section class="intro home-section"><div class="container"><h2>Bienvenue sur Algeria Epic Tracks</h2><p>Partez à la découverte de l'Algérie au guidon de votre moto. De la côte méditerranéenne aux montagnes de l'Atlas et jusqu'aux immensités du Sahara, découvrez nos itinéraires par route ou par pistes.</p></div></section>
-<section class="cards home-section" id="services"><div class="container"><div class="cards-grid">
-  <article class="card"><div class="card-image">🏍️</div><div class="card-content"><h3>Pistes moto</h3><p>Découvrez nos pistes sélectionnées pour vivre une véritable aventure à travers l'Algérie.</p><a href="#pistes" class="card-button">Découvrir</a></div></article>
-  <article class="card"><div class="card-image">🗺️</div><div class="card-content"><h3>Routes moto</h3><p>Routes de montagne, de désert et parcours panoramiques.</p><a href="#routes" class="card-button">Voir les itinéraires</a></div></article>
- </div></div></section>
-<section class="destinations home-section" id="destinations"><div class="container"><div class="section-title"><h2>Destinations incontournables</h2><p>Les grandes régions algériennes à découvrir à moto</p></div><div class="destination-grid"><div class="destination"><div><h3>Les Aurès</h3><p>Montagnes et routes panoramiques</p></div></div><div class="destination"><div><h3>Le Sahara</h3><p>Désert et grands espaces</p></div></div><div class="destination"><div><h3>Tassili n'Ajjer</h3><p>Paysages exceptionnels</p></div></div><div class="destination"><div><h3>Constantine</h3><p>La ville des ponts suspendus</p></div></div></div></div></section>
+
+<section class="cards home-section" id="services">
+ <div class="container"><div class="cards-grid">
+  <article class="card">
+    <div class="card-image">
+     <img src="images/pistes.jpg" alt="Pistes" style="width:100%; height:100%; object-fit:cover; display:block;">
+    </div>
+   
+    <div class="card-content"><h3>Pistes moto</h3>
+       <p>Découvrez nos pistes sélectionnées pour vivre une véritable aventure à travers l'Algérie.</p>
+       <a href="#pistes" class="card-button">Voir les itinéraires</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="card-image">
+      <img src="images/routes2.jpg" alt="Routes" style="width:100%; height:100%; object-fit:cover; display:block;">
+    </div>
+    <div class="card-content"><h3>Routes moto</h3>
+      <p>Routes de montagne, de désert et parcours panoramiques.</p>
+      <a href="#routes" class="card-button">Voir les itinéraires</a>
+    </div>
+   </article>
+</div>
+</div>
+</section>
+
 
 <!-- PAGE DE SELECTION : PISTES -->
-<main class="route-page" id="pistes"><div class="route-title"><div class="container"><h1>Nos pistes moto en Algérie</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Pistes moto</div></div></div><section class="listing-intro"><div class="container"><p>Nos itinéraires sont soigneusement sélectionnés pour la beauté de leurs paysages et les émotions qu'ils procurent.</p><p>Des routes sinueuses aux panoramas grandioses, chaque parcours est une invitation à explorer l'Algérie.</p><p>Choisissez un circuit pour découvrir son programme et ses informations pratiques.</p></div></section><section class="circuit-list"><div class="container"><div class="circuit-grid"><article class="circuit-card">
+<!--<main class="route-page" id="pistes"><div class="route-title"><div class="container"><h1>Nos pistes moto en Algérie</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Pistes moto</div></div></div><section class="listing-intro"><div class="container"><p>Nos itinéraires sont soigneusement sélectionnés pour la beauté de leurs paysages et les émotions qu'ils procurent.</p><p>Des routes sinueuses aux panoramas grandioses, chaque parcours est une invitation à explorer l'Algérie.</p><p>Choisissez un circuit pour découvrir son programme et ses informations pratiques.</p></div></section><section class="circuit-list"><div class="container"><div class="circuit-grid"><article class="circuit-card">
+-->
+
+<main class="route-page" id="pistes">
+  <div class="route-title">
+    <div class="container">
+      <h1>Nos pistes moto en Algérie</h1>
+      <div class="crumbs"><a href="#accueil">Accueil</a> / Pistes moto</div>
+    </div>
+  </div>
+  <section class="listing-intro">
+    <div class="container">
+       <p style="text-align: center; font-weight: bold; white-space: nowrap; font-size: 14px;">
+          Nos itinéraires sont soigneusement sélectionnés pour la beauté de leurs paysages et les émotions qu'ils procurent.<br>
+          Des routes sinueuses aux panoramas grandioses, chaque parcours est une invitation à explorer l'Algérie.<br>
+          Choisissez un circuit pour découvrir son programme et ses informations pratiques.
+       </p>
+    </div>
+  </section>
+  <section class="circuit-list">
+    <div class="container">
+      <div class="circuit-grid">
+        <article class="circuit-card">
 <div class="circuit-visual"><img src="images/jijel1.png" alt="La petite Kabylie" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit piste · 2 jours</span><h2>La boucle des Babors</h2><p>Un itinéraire au cœur des reliefs des Babors, entre pistes de montagne et paysages de Petite Kabylie. Départ prévu depuis la région de Jijel.</p><a class="btn btn-primary" href="#piste-nord-est">Découvrir ce circuit</a></div></article></div></div></section></main>
 
 <!-- PAGE DE SELECTION : ROUTES -->
-<main class="route-page" id="routes"><div class="route-title"><div class="container"><h1>Nos routes moto en Algérie</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Routes moto</div></div></div><section class="listing-intro"><div class="container"><p>Nos itinéraires sont soigneusement sélectionnés pour la beauté de leurs paysages et les émotions qu'ils procurent.</p>
-<p>Des routes sinueuses aux panoramas grandioses, chaque parcours est une invitation à explorer l'Algérie.</p>
-<p>Choisissez un circuit pour découvrir son programme et ses informations pratiques.</p></div></section><section class="circuit-list"><div class="container"><div class="circuit-grid">
-  <article class="circuit-card"><div class="circuit-visual"><img src="images/Aures1.jpg" alt="Le Constantinois" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit route · 10 jours</span><h2>Le Constantinois</h2><p>Découvrez les paysages et les routes de l'Est algérien, avec un passage par la région de Constantine.</p><a class="btn btn-primary" href="#route-nord-imperial">Découvrir ce circuit</a></div></article>
+<main class="route-page" id="routes"><div class="route-title"><div class="container"><h1>Nos routes moto en Algérie</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Routes moto</div></div></div><section class="listing-intro">
+ <div class="container">
+ <p style="text-align: center; font-weight: bold; white-space: nowrap; font-size: 14px;">
+          Nos itinéraires sont soigneusement sélectionnés pour la beauté de leurs paysages et les émotions qu'ils procurent.<br>
+          Des routes sinueuses aux panoramas grandioses, chaque parcours est une invitation à explorer l'Algérie.<br>
+          Choisissez un circuit pour découvrir son programme et ses informations pratiques.
+ </p>
+</div>
+</section>
+<section class="circuit-list"><div class="container"><div class="circuit-grid">
+  <article class="circuit-card"><div class="circuit-visual"><img src="images/est.jpg" alt="Le Constantinois" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit route · 10 jours</span><h2>Le Constantinois</h2><p>Découvrez les paysages et les routes de l'Est algérien, avec un passage par la région de Constantine.</p><a class="btn btn-primary" href="#route-nord-imperial">Découvrir ce circuit</a></div></article>
   <article class="circuit-card"><div class="circuit-visual"><img src="images/djur.jpg" alt="Le Constantinois" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit route · 4 jours</span><h2>La Grande Kabylie</h2><p>Un itinéraire panoramique à travers les reliefs et les paysages de Kabylie, pensé pour profiter des routes de montagne.</p><a class="btn btn-primary" href="#route-grandekabylie">Découvrir ce circuit</a></div></article>
   <article class="circuit-card"><div class="circuit-visual">🏜️</div><div class="circuit-content"><span class="tag">Circuit route · 7 jours</span><h2>Aurèsahara</h2><p>Un circuit reliant les reliefs des Aurès aux paysages sahariens. Le programme détaillé pourra être complété ultérieurement.</p><a class="btn btn-primary" href="#route-auresahara">Découvrir ce circuit</a></div></article>
 </div></div></section></main>
 
-<main class="route-page" id="equipe"><div class="route-title"><div class="container"><h1>Notre équipe</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Notre équipe</div></div></div><section class="listing-intro"><div class="container"><p>Une équipe passionnée par la moto, les grands espaces et la découverte de l'Algérie.</p></div></section><section class="circuit-list"><div class="container"><div class="circuit-grid"><article class="circuit-card"><div class="circuit-content"><h2>Ninou</h2><p>Originaire de Petite Kabylie, montagnard de père en fils, il met à votre service son expérience sur les sentiers et les pistes. Passionné par son pays et ses traditions, il vous invite à découvrir les paysages et la culture de l'Algérie.</p></div></article><article class="circuit-card"><div class="circuit-content"><h2>Chmissou</h2><p>Passionné de mécanique et de moto depuis toujours, il veille à l'entretien des motos et intervient en cas de panne ou de difficulté mécanique.</p></div></article><article class="circuit-card"><div class="circuit-content"><h2>KR</h2><p>Fondateur d'Algeria Epic Tracks et concepteur des circuits, passionné de nature sauvage, d'exploration, de sport nature et de randonnée.</p></div></article></div></div></section></main>
+<main class="route-page" id="equipe"><div class="route-title"><div class="container"><h1>Notre équipe</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Notre équipe</div></div></div><section class="listing-intro"><div class="container"><p>Une équipe passionnée par la moto, les grands espaces et la découverte de l'Algérie.</p></div></section><section class="circuit-list"><div class="container"><div class="circuit-grid"><article class="circuit-card"><div class="circuit-content"><h2>Ninou</h2><p>Originaire de Petite Kabylie, montagnard de père en fils, il met à votre service son expérience sur les sentiers et les pistes. Passionné par son pays et ses traditions, il vous invite à découvrir les paysages et la culture de l'Algérie.</p></div></article><article class="circuit-card"><div class="circuit-content"><h2>Chmissou</h2><p>Passionné de mécanique et de moto depuis toujours, il veille à l'entretien des motos et intervient en cas de panne ou de difficulté mécanique.</p></div></article><article class="circuit-card"><div class="circuit-content"><h2>KR</h2><p>Fondateur d'Algeria Epic Tracks et concepteur des circuits, passionné de sport nature et de randonnée pédestre et motorisée.</p></div></article></div></div></section></main>
+
+<main class="route-page" id="voiture"><div class="route-title"><div class="container"><h1>Voyage 4*4 en Algérie</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Voyage 4*4 en Algérie</div></div></div><section class="listing-intro"><div class="container">
+<p>Tous nos circuits motos sont également proposés en 4x4. À la demande de nos clients, nous avons conçu cette offre pour permettre à chacun de vivre l'aventure en famille ou entre amis, de partager des paysages grandioses et de profiter de notre expertise.</p></div></section>
+ <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th colspan="5">Tarifs par Personne</th>
+                    </tr>
+                    <tr>
+                        <th colspan="5" style="font-size: 12px; font-weight: normal; background: #f0f0f0;">
+                            En fonction du nombre d'occupants dans le 4x4
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Nb personnes/4x4 -></th>
+                        <th>01 Pers</th>
+                        <th>02 Pers</th>
+                        <th>03 Pers</th>
+                        <th>04 Pers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="duration">2jours</td>
+                        <td class="price">1000,00</td>
+                        <td class="price">600,00</td>
+                        <td class="price">400,00</td>
+                        <td class="price">300,00</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">3jours</td>
+                        <td class="price">1300,00</td>
+                        <td class="price">800,00</td>
+                        <td class="price">600,00</td>
+                        <td class="price">500,00</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">4jours</td>
+                        <td class="price">1600,00</td>
+                        <td class="price">1000,00</td>
+                        <td class="price">800,00</td>
+                        <td class="price">700,00</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">5 jours</td>
+                        <td class="price">1900,00</td>
+                        <td class="price">1200,00</td>
+                        <td class="price">1000,00</td>
+                        <td class="price">900,00</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">6 jours</td>
+                        <td class="price">2200,00</td>
+                        <td class="price">1400,00</td>
+                        <td class="price">1200,00</td>
+                        <td class="price">1100,00</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">7 jours</td>
+                        <td class="price">2500,00</td>
+                        <td class="price">1600,00</td>
+                        <td class="price">1400,00</td>
+                        <td class="price">1300,00</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">8 jours</td>
+                        <td class="price">2800,00</td>
+                        <td class="price">1800,00</td>
+                        <td class="price">1600,00</td>
+                        <td class="price">1500,00</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">9 jours</td>
+                        <td class="price">3100,00</td>
+                        <td class="price">2000,00</td>
+                        <td class="price">1800,00</td>
+                        <td class="price">1700,00</td>
+                    </tr>
+                    <tr>
+                        <td class="duration">10 jours</td>
+                        <td class="price">3400,00</td>
+                        <td class="price">2200,00</td>
+                        <td class="price">2000,00</td>
+                        <td class="price">1900,00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+</div></div>
+</section>
+</main>
+
 
 <!-- FICHE CIRCUIT : CONSTANTINOIS -->
 <main class="route-page" id="route-nord-imperial">
@@ -70,7 +258,7 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
    </div>
  </div>
 <div class="route-body">
-  <div class="container"><img src="images/Aures1.jpg" alt="Paysages d'Algérie">
+  <div class="container"><img src="images/est.jpg" alt="Paysages d'Algérie">
     <p style="margin-top:20px; position:relative; clear:both;">
             Découvrez les paysages et les routes de l'Est algérien, avec un passage par la région des Aurès.
     </p>
@@ -386,7 +574,6 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
 <!-- SECTION CONTACT -->
 <main class="route-page" id="contact">
 
-
     <div class="contact-container">
 
         <h2>Contactez-nous</h2>
@@ -396,7 +583,13 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
             Écrivez-nous !
         </p>
 
-        <form id="contactForm">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Clé d'accès Web3Forms (à remplacer) -->
+            <input type="hidden" name="access_key" value="e874723a-243e-40ef-abe4-9570bd4d98e1">
+
+            <!-- Anti-spam Honeypot (masqué pour l'utilisateur) -->
+            <input type="checkbox" name="botcheck" style="display: none;">
 
             <label for="nom">Nom et prénom</label>
             <input type="text" id="nom" name="nom" required>
@@ -405,19 +598,16 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
             <input type="email" id="email" name="email" required>
 
             <label for="objet">Objet</label>
-            <input type="text" id="objet" name="objet" required>
+            <input type="text" id="objet" name="subject" required>
 
             <label for="message">Votre message</label>
-            <textarea id="message" name="message"
-                      rows="6" required></textarea>
+            <textarea id="message" name="message" rows="6" required></textarea>
 
             <button type="submit">Envoyer le message</button>
 
         </form>
 
     </div>
-
-
 
 <style>
     .contact-section {
@@ -476,36 +666,9 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
     }
 </style>
 
-<script>
-    document.getElementById("contactForm")
-        .addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            const destinataire = "ton-adresse@email.com";
-            const nom = document.getElementById("nom").value;
-            const email = document.getElementById("email").value;
-            const objet = document.getElementById("objet").value;
-            const message = document.getElementById("message").value;
-
-            const sujet = encodeURIComponent(objet);
-
-            const corps = encodeURIComponent(
-                "Nom : " + nom + "\n" +
-                "E-mail : " + email + "\n\n" +
-                message
-            );
-
-            window.location.href =
-                "mailto:" + destinataire +
-                "?subject=" + sujet +
-                "&body=" + corps;
-        });
-</script>
-
 </main>
 
-<footer id="contact"><div class="container"><div class="footer-grid"><div><h3>Algeria Epic Tracks</h3><p>Le guide du voyage à moto en Algérie. Itinéraires, destinations et conseils pour préparer votre aventure.</p></div><div><h3>Navigation</h3><ul><li><a href="#accueil">Accueil</a></li><li><a href="#equipe">Notre équipe</a></li><li><a href="#pistes">Pistes moto</a></li><li><a href="#routes">Routes moto</a></li></ul></div><div><h3>Contact</h3><ul><li>📧 contact@algeriaepictracks.com</li><li>📞 +33 6 00 00 00 00</li><li>🌎 France / Algérie</li></ul></div></div><div class="footer-bottom">© 2026 Algeria Epic Tracks — Tous droits réservés</div></div></footer>
+<footer id="contact"><div class="container"><div class="footer-grid"><div><h3>Algeria Epic Tracks</h3><p>Le guide du voyage à moto en Algérie par les plus belles routes et pistes.</p></div><div><h3>Navigation</h3><ul><li><a href="#accueil">Accueil</a></li><li><a href="#equipe">Notre équipe</a></li><li><a href="#pistes">Pistes moto</a></li><li><a href="#routes">Routes moto</a></li></ul></div><div><h3>Contact</h3><ul><li>📧 contact@algeriaepictracks.com</li><li>📞 +33 6 00 00 00 00</li><li>🌎 France / Algérie</li></ul></div></div><div class="footer-bottom">© 2026 Algeria Epic Tracks — Tous droits réservés</div></div></footer>
 
 <script>
 /* Carrousel de la page d'accueil */
