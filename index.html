@@ -7,8 +7,64 @@
 <style>
 :root{--orange:#f4a62a;--orange-dark:#dc8b13;--blue:#173b4d;--blue-dark:#102d3b;--white:#fff;--light:#f4f4f4;--text:#333}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}a{text-decoration:none;color:inherit}.container{width:92%;max-width:1180px;margin:auto}
-#site-top{position:fixed;top:0;left:0;width:100%;z-index:100;box-shadow:0 2px 6px #00000010} .top-header{background:#E99F02;color:#fff;padding:4px 0;font-size:13px}.top-header .container{display:flex;justify-content:flex-end;gap:25px;flex-wrap:wrap}
+ #site-top{position:fixed;top:0;left:0;width:100%;z-index:100;box-shadow:0 2px 6px #00000010} .top-header{background:#E99F02;color:#fff;padding:4px 0;font-size:13px}.top-header .container{display:flex;justify-content:flex-end;gap:25px;flex-wrap:wrap} 
 
+
+<!--
+#site-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 6px #00000010;
+}
+
+.top-header {
+  background: #E99F02;
+  color: #fff;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.top-header .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+
+.whatsapp-contact {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.whatsapp-line {
+  display: grid;
+  grid-template-columns: 58px 16px 52px auto;
+  align-items: center;
+  column-gap: 3px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.whatsapp-title {
+  font-weight: normal;
+}
+
+.whatsapp-line img {
+  width: 15px;
+  height: 15px;
+}
+
+.whatsapp-line .country {
+  text-align: left;
+}
+-->
 
 
 .header {
@@ -53,12 +109,115 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
 @media(max-width:500px){.logo{font-size:24px}.hero{height:490px}.hero h1{font-size:30px}.hero-description{font-size:15px}.hero-content{width:90%;padding:22px 18px}.hero-arrow{width:40px;height:40px}.hero-prev{left:10px}.hero-next{right:10px}.destination-grid{grid-template-columns:1fr}.route-title h1{font-size:25px}}
 
 
+/* Limiter la sélection du texte */
+.protected-content {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Empêcher le glisser-déposer des images */
+img {
+    -webkit-user-drag: none;
+}
+
+
+
 
 </style>
 </head>
 <body>
- <div id="site-top">
-  <div class="top-header"><div class="container"><span>📧 contact@algeriaepictracks.com</span><span>📞 +33 6 00 00 00 00</span></div></div>
+<!-- <div id="site-top">  
+   <div class="top-header">
+    <div class="container">
+    <span>📧 contact@algeria-epic-tracks.com</span>
+    <span>📞 +33 6 00 00 00 00</span>
+   </div>
+ </div>
+-->
+
+<!--
+ <div class="site-top">
+    <div class="top-header">
+    <div class="container">
+    <span>📧 contact@algeria-epic-tracks.com</span>
+    <span>Whatsapp <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+             alt="WhatsApp"
+             style="width:20px; height:20px; vertical-align:middle;"> Algérie: +231 6 12 05 32 00
+    <br>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+             alt="WhatsApp"
+             style="width:20px; height:20px; vertical-align:middle;"> France: +33 6 28 03 65 24</span>
+   </div>
+ </div>
+-->
+
+<!--
+<div class="site-top">
+  <div class="top-header">
+    <div class="container">
+
+      <span>📧 contact@algeria-epic-tracks.com</span>
+
+      <span class="whatsapp-contact">
+
+        <span class="whatsapp-title">WhatsApp</span>
+
+        <span class="whatsapp-line">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+               alt="WhatsApp">
+          <span class="country">Algérie :</span>
+          <span>+213 6 12 05 32 00</span>
+        </span>
+
+        <span class="whatsapp-line">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+               alt="WhatsApp">
+          <span class="country">France :</span>
+          <span>+33 6 38 00 69 20</span>
+        </span>
+
+      </span>
+
+    </div>
+  </div>
+-->
+
+
+
+<div class="site-top">
+  <div class="top-header">
+    <div class="container">
+
+      <span>📧 contact@algeria-epic-tracks.com</span>
+<span class="whatsapp-contact">
+
+  <span class="whatsapp-line">
+    <span class="whatsapp-title">WhatsApp</span>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp">
+    <span class="country">Algérie :</span>
+    <span>+213 5 62 34 44 72</span>
+  </span>
+
+  <span class="whatsapp-line">
+    <span class="whatsapp-title"></span>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp">
+    <span class="country">France :</span>
+    <span>+33 6 28 03 65 24</span>
+  </span>
+
+</span>
+   </div>
+  </div>
+
+</div>
+
+
+
+    
+</div>
+
 <!--  <header class="header"><div class="container header-content"><div><div class="logo">Algeria<span> Epic Tracks</span></div><div class="logo-small">L'Algérie à Moto</div></div></div></header>  -->
   
 
@@ -81,12 +240,12 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
 </div>
 
 <section class="hero home-section" id="accueil">
-  <div class="hero-slides"><div class="hero-slide active" style="background-image:url('images/Aures1.jpg')"></div><div class="hero-slide" style="background-image:url('images/Aures11.png')"></div><div class="hero-slide" style="background-image:url('images/babors2.png')"></div><div class="hero-slide" style="background-image:url('images/sah1.jpg')"></div><div class="hero-slide" style="background-image:url('images/constantine.jpg')"></div></div>
-  <div class="container"><div class="hero-content"><div class="hero-eyebrow">Voyages à moto en Algérie</div><h1>L'Algérie<br><span>à moto</span></h1><p class="hero-description">Découvrez l'Algérie à moto, de la Méditerranée aux Aurès, des Hauts-Plateaux jusqu'au Sahara à travers les routes et les pistes les plus épiques.</p><div class="buttons"><a href="#pistes" class="btn btn-primary">Explorer les pistes</a><a href="#routes" class="btn btn-outline">Voir les routes</a></div></div></div>
+  <div class="hero-slides"><div class="hero-slide active" style="background-image:url('images/Aures11.png')"></div><div class="hero-slide" style="background-image:url('images/Aures1.jpg')"></div><div class="hero-slide" style="background-image:url('images/babors2.png')"></div><div class="hero-slide" style="background-image:url('images/sah1.jpg')"></div><div class="hero-slide" style="background-image:url('images/auresah1.jpg')"></div></div>
+  <div class="container"><div class="hero-content"><div class="hero-eyebrow">Voyages à moto en Algérie</div><h1>L'Algérie<br><span>à moto</span></h1><section class="protected-content"><p class="hero-description">Découvrez l'Algérie à moto, de la Méditerranée aux Aurès, des Hauts-Plateaux jusqu'au Sahara à travers les routes et les pistes les plus épiques.</p></section><div class="buttons"><a href="#pistes" class="btn btn-primary">Explorer les pistes</a><a href="#routes" class="btn btn-outline">Voir les routes</a></div></div></div>
   <button class="hero-arrow hero-prev" aria-label="Photo précédente">❮</button><button class="hero-arrow hero-next" aria-label="Photo suivante">❯</button>
   <div class="hero-dots"><button class="hero-dot active" data-slide="0" aria-label="Photo 1"></button><button class="hero-dot" data-slide="1" aria-label="Photo 2"></button><button class="hero-dot" data-slide="2" aria-label="Photo 3"></button><button class="hero-dot" data-slide="3" aria-label="Photo 4"></button><button class="hero-dot" data-slide="4" aria-label="Photo 5"></button></div>
 </section>
-<section class="intro home-section"><div class="container"><h2>Bienvenue sur Algeria Epic Tracks</h2><p>Partez à la découverte de l'Algérie au guidon de votre moto. De la côte méditerranéenne aux montagnes de l'Atlas et jusqu'aux immensités du Sahara, découvrez nos itinéraires par route ou par pistes.</p></div></section>
+<section class="intro home-section"><div class="container"><section class="protected-content"><h2>Bienvenue sur Algeria Epic Tracks</h2><p>Partez à la découverte de l'Algérie au guidon de votre moto. De la côte méditerranéenne aux montagnes de l'Atlas et jusqu'aux immensités du Sahara, découvrez nos itinéraires par route ou par pistes.</p></section></div></section>
 
 <section class="cards home-section" id="services">
  <div class="container"><div class="cards-grid">
@@ -96,7 +255,9 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
     </div>
    
     <div class="card-content"><h3>Pistes moto</h3>
+       <section class="protected-content">
        <p>Découvrez nos pistes sélectionnées pour vivre une véritable aventure à travers l'Algérie.</p>
+       </section>
        <a href="#pistes" class="card-button">Voir les itinéraires</a>
     </div>
   </article>
@@ -105,7 +266,9 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
       <img src="images/routes2.jpg" alt="Routes" style="width:100%; height:100%; object-fit:cover; display:block;">
     </div>
     <div class="card-content"><h3>Routes moto</h3>
+      <section class="protected-content">
       <p>Routes de montagne, de désert et parcours panoramiques.</p>
+      </section>
       <a href="#routes" class="card-button">Voir les itinéraires</a>
     </div>
    </article>
@@ -138,7 +301,7 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
     <div class="container">
       <div class="circuit-grid">
         <article class="circuit-card">
-<div class="circuit-visual"><img src="images/jijel1.png" alt="La petite Kabylie" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit piste · 2 jours</span><h2>La boucle des Babors</h2><p>Un itinéraire au cœur des reliefs des Babors, entre pistes de montagne et paysages de Petite Kabylie. Départ prévu depuis la région de Jijel.</p><a class="btn btn-primary" href="#piste-nord-est">Découvrir ce circuit</a></div></article></div></div></section></main>
+<div class="circuit-visual"><img src="images/jijel1.png" alt="La petite Kabylie" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit piste · 2 jours</span><section class="protected-content"><h2>La boucle des Babors</h2><p>Un itinéraire au cœur des reliefs des Babors, entre pistes de montagne et paysages de Petite Kabylie. Départ prévu depuis la région de Jijel.</p></section><a class="btn btn-primary" href="#piste-nord-est">Découvrir ce circuit</a></div></article></div></div></section></main>
 
 <!-- PAGE DE SELECTION : ROUTES -->
 <main class="route-page" id="routes"><div class="route-title"><div class="container"><h1>Nos routes moto en Algérie</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Routes moto</div></div></div><section class="listing-intro">
@@ -151,15 +314,15 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
 </div>
 </section>
 <section class="circuit-list"><div class="container"><div class="circuit-grid">
-  <article class="circuit-card"><div class="circuit-visual"><img src="images/est.jpg" alt="Le Constantinois" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit route · 10 jours</span><h2>Le Constantinois</h2><p>Découvrez les paysages et les routes de l'Est algérien, avec un passage par la région de Constantine.</p><a class="btn btn-primary" href="#route-nord-imperial">Découvrir ce circuit</a></div></article>
-  <article class="circuit-card"><div class="circuit-visual"><img src="images/djur.jpg" alt="Le Constantinois" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit route · 4 jours</span><h2>La Grande Kabylie</h2><p>Un itinéraire panoramique à travers les reliefs et les paysages de Kabylie, pensé pour profiter des routes de montagne.</p><a class="btn btn-primary" href="#route-grandekabylie">Découvrir ce circuit</a></div></article>
-  <article class="circuit-card"><div class="circuit-visual">🏜️</div><div class="circuit-content"><span class="tag">Circuit route · 7 jours</span><h2>Aurèsahara</h2><p>Un circuit reliant les reliefs des Aurès aux paysages sahariens. Le programme détaillé pourra être complété ultérieurement.</p><a class="btn btn-primary" href="#route-auresahara">Découvrir ce circuit</a></div></article>
+  <article class="circuit-card"><div class="circuit-visual"><img src="images/est.jpg" alt="Le Constantinois" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit route · 10 jours</span><h2>Le Constantinois</h2><section class="protected-content"><p>Découvrez les paysages et les routes de l'Est algérien, avec un passage par la région de Constantine.</p></section><a class="btn btn-primary" href="#route-nord-imperial">Découvrir ce circuit</a></div></article>
+  <article class="circuit-card"><div class="circuit-visual"><img src="images/djur.jpg" alt="Le Constantinois" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit route · 4 jours</span><h2>La Grande Kabylie</h2><section class="protected-content"><p>Un itinéraire panoramique à travers les reliefs et les paysages de Kabylie, pensé pour profiter des routes de montagne.</p></section><a class="btn btn-primary" href="#route-grandekabylie">Découvrir ce circuit</a></div></article>
+  <article class="circuit-card"><div class="circuit-visual"><img src="images/auresah1.jpg" alt="L'Aures" style="width:100%; height:100%; object-fit:cover; display:block;"></div><div class="circuit-content"><span class="tag">Circuit route · 7 jours</span><h2>Aurèsahara</h2><section class="protected-content"><p>Un circuit reliant les reliefs des Aurès aux paysages sahariens. Le programme détaillé pourra être complété ultérieurement.</p></section><a class="btn btn-primary" href="#route-auresahara">Découvrir ce circuit</a></div></article>
 </div></div></section></main>
 
-<main class="route-page" id="equipe"><div class="route-title"><div class="container"><h1>Notre équipe</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Notre équipe</div></div></div><section class="listing-intro"><div class="container"><p>Une équipe passionnée par la moto, les grands espaces et la découverte de l'Algérie.</p></div></section><section class="circuit-list"><div class="container"><div class="circuit-grid"><article class="circuit-card"><div class="circuit-content"><h2>Ninou</h2><p>Originaire de Petite Kabylie, montagnard de père en fils, il met à votre service son expérience sur les sentiers et les pistes. Passionné par son pays et ses traditions, il vous invite à découvrir les paysages et la culture de l'Algérie.</p></div></article><article class="circuit-card"><div class="circuit-content"><h2>Chmissou</h2><p>Passionné de mécanique et de moto depuis toujours, il veille à l'entretien des motos et intervient en cas de panne ou de difficulté mécanique.</p></div></article><article class="circuit-card"><div class="circuit-content"><h2>KR</h2><p>Fondateur d'Algeria Epic Tracks et concepteur des circuits, passionné de sport nature et de randonnée pédestre et motorisée.</p></div></article></div></div></section></main>
+<main class="route-page" id="equipe"><div class="route-title"><div class="container"><h1>Notre équipe</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Notre équipe</div></div></div><section class="listing-intro"><div class="container"><p>Une équipe passionnée par la moto, les grands espaces et la découverte de l'Algérie.</p></div></section><section class="circuit-list"><div class="container"><div class="circuit-grid"><article class="circuit-card"><div class="circuit-content"><section class="protected-content"><h2>Ninou</h2><p>Originaire de Petite Kabylie, montagnard de père en fils, il met à votre service son expérience sur les sentiers et les pistes. Passionné par son pays et ses traditions, il vous invite à découvrir les paysages et la culture de l'Algérie.</p></section></div></article><article class="circuit-card"><div class="circuit-content"><section class="protected-content"><h2>Chmissou</h2><p>Passionné de mécanique et de moto depuis toujours, il veille à l'entretien des motos et intervient en cas de panne ou de difficulté mécanique.</p></section></div></article><article class="circuit-card"><div class="circuit-content"><section class="protected-content"><h2>KR</h2><p>Fondateur d'Algeria Epic Tracks et concepteur des circuits, passionné de sport nature et de randonnée pédestre et motorisée.</p></section></div></article></div></div></section></main>
 
 <main class="route-page" id="voiture"><div class="route-title"><div class="container"><h1>Voyage 4*4 en Algérie</h1><div class="crumbs"><a href="#accueil">Accueil</a> / Voyage 4*4 en Algérie</div></div></div><section class="listing-intro"><div class="container">
-<p>Tous nos circuits motos sont également proposés en 4x4. À la demande de nos clients, nous avons conçu cette offre pour permettre à chacun de vivre l'aventure en famille ou entre amis, de partager des paysages grandioses et de profiter de notre expertise.</p></div></section>
+<section class="protected-content"><p>Tous nos circuits motos sont également proposés en 4x4. À la demande de nos clients, nous avons conçu cette offre pour permettre à chacun de vivre l'aventure en famille ou entre amis, de partager des paysages grandioses et de profiter de notre expertise.</p></section></div></section>
  <table class="pricing-table">
                 <thead>
                     <tr>
@@ -245,6 +408,33 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
 
                 </tbody>
             </table>
+
+ <table>
+    <thead>
+      <tr>
+        <th>Compris dans l'offre</th>
+        <th>Non compris</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Prise en charge à l'arrivée et au départ et transferts</td>
+        <td>Assurances annulation et rapatriement</td>
+      </tr>
+     <tr>
+        <td>Location du 4*4 avec le guide</td>
+        <td>Frais de visa et vols internationaux</td>
+     </tr>
+     <tr>
+       <td>Pension complète pendant le circuit</td>
+       <td>Boissons, pourboires et visites éventuelles</td>
+     </tr>
+     
+  
+    
+   </tbody>
+  </table>
+
 </div></div>
 </section>
 </main>
@@ -330,7 +520,7 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
 </div>
 
 <section class="route-desc"><div class="container"><h2>Description du circuit</h2>
-
+<section class="protected-content">
  <h3>Jour 1 : Béjaia – Jijel, 90 kms, 4 h de trajet</h3>
       <p>Cette première étape nous permet de quitter Béjaia et sa large baie pour rejoindre la ville de Jijel. A partir de l'oued agrioun nous abordons la pittoresque route de corniche qui suit le littoral du massif de petite Kabylie.</p>
       <p>Les sections de routes rectilignes font place à une succession de plus en plus serrée de virages taillés au bord de la falaise qui nous font penser à certaines routes de falaises du Vercors.</p>
@@ -386,19 +576,19 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
       <p> On atteint Bou Saada, cité du bonheur, ou l'on visitera le vieux ksar et le moulin Ferrero.</p>
       <p> Diner et nuit dans un gite traditionnel dans la campagne de Bou Saada.</p>
 
-      <h3>Jour 9 : Bou Saada - Hammam Guergour, 240 km, 7 h de trajet</h3>
+      <h3>Jour 9 : Bou Saada - Hammam oued Boussalam, 240 km, 7 h de trajet</h3>
       <p> Nous sortons de Bou Saada pour aller visiter les petites dunes de sables en contrefort du Jbel Kenfoud.</p>
       <p> Nous traversons le chott du Hodna pour arriver dans un site montagneux à 1000 mètres d'altitude d’une saisissante beauté ou se trouve les ruines de la première capitale des émirs hammadides, fondée en 1007 et démantelée en 1152, qui nous restituent l’image authentique d’une ville musulmane fortifiée.</p>
       <p> Visite de la Kalaa.</p>
-      <p> Nous pursuivons la route en traversant les monts du Hodna pour arriver à la station thermale Hammam Guergour nichée dans une vallée verdoyante au cœur de paysages montagneux et escarpés.</p>
+      <p> Nous pursuivons la route en traversant les monts du Hodna pour arriver à la station thermale Hammam de oued Boussalam nichée dans une vallée verdoyante au cœur de paysages montagneux et escarpés.</p>
       <p> Bain et détente dans les sources chaudes.</p>
       <p> Diner et nuit sur le site.</p>
 
-      <h3>Jour 10 : Hammam Guergour - Béjaia, 101 km, 4 h de trajet</h3>
-      <p> Petite promenade le matin dans les gorges de Hammam Guergour.</p>
+      <h3>Jour 10 : Hammam oued Boussalam - Béjaia, 101 km, 4 h de trajet</h3>
+      <p> Petite promenade le matin dans les gorges de Hammam oued Boussalam.</p>
       <p> Nous continuons par la traversée des gorges de Chabet El Akra (le ravin de la mort), récemment réhabilitées . Ces gorges longues de 7 kilomètres, taillées dans les masses rocheuses des montagnes des Babors offre un invraisemblable amoncellement d'aretes dechiquetées et de rochers abruptes.</p>
       <p> Retour à Béjaia.</p>
-
+</section>
 </div>
 </section>
 </main>
@@ -472,7 +662,7 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
    </div>
    <section class="route-desc">
        <div class="container"><h2>Description du circuit</h2>
-
+       <section class="protected-content">
             <h3>Jour 1 : Béjaia – Ain El Hammam, 160 kms, 6 h de trajet</h3>
             <p>Nous quittons la côte de Béjaia pour nous engager en altitude à travers la route ponctuée d'oliviers, de jardins, de vergers et de villages accrochés aux versants. La route prend alors un caractère de plus en plus sinueux à l'approche de Toudja.</p>
             <p>La route passe à proximité des ruines d'un aqueduc romain alimentant autrefois la ville de Béjaia.</p>
@@ -503,13 +693,13 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
             <p>Par la suite la route domine le rivage d'une centaine de mètres , puis déroule ses sinuosités entre des figuiers et des oliviers en s'approchant de Béjaia.</p>
             <p>Courte promenade à la presqu'île de Cap Carbon pour suivre le magnifique sentier du littoral accroché à flanc de falaise.</p>
             <p>Diner et nuit à Béjaia.</p>
-
+       </section>
        </div>
    </section>
 </main>
 
 <!-- FICHE CIRCUIT : AURESahara -->
-<main class="route-page" id="route-auresahara"><div class="route-title"><div class="container"><h1>7 jours : Aurèsahara</h1><div class="crumbs"><a href="#accueil">Accueil</a> / <a href="#routes">Routes moto</a> / Aurèsahara</div></div></div><div class="route-body"><div class="container"><img src="images/tassili.jpg" alt="Paysages du Sahara algérien"><p>Un circuit de 7 jours entre les reliefs des Aurès et les paysages sahariens. Le détail de l'itinéraire, de la carte et du budget sera publié prochainement.</p></div></div></main>
+<main class="route-page" id="route-auresahara"><div class="route-title"><div class="container"><h1>7 jours : Aurèsahara</h1><div class="crumbs"><a href="#accueil">Accueil</a> / <a href="#routes">Routes moto</a> / Aurèsahara</div></div></div><div class="route-body"><div class="container"><img src="images/auresah1.jpg" alt="L'Aures"><p>Un circuit de 7 jours entre les reliefs des Aurès et les paysages sahariens. Le détail de l'itinéraire et du budget sera publié prochainement.</p></div></div></main>
 
 <!-- FICHE CIRCUIT : BOUCLE DES BABORS -->
 <main class="route-page" id="piste-nord-est">
@@ -523,7 +713,7 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
   <div class="container">
     <img src="images/babors2.png" alt="Pistes Babors" style="width:100%; height:auto; display:block;">
     <p style="margin-top:20px; position:relative; clear:both;">
-            Un itinéraire au cœur des reliefs des Babors, entre pistes de montagne et paysages de Petite Kabylie.
+            <section class="protected-content"> Un itinéraire au cœur des reliefs des Babors, entre pistes de montagne et paysages de Petite Kabylie.</section>
     </p>
   </div>
 </div>
@@ -550,7 +740,7 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
   </div>
 </div>
 <section class="route-desc"><div class="container"><h2>Description du circuit</h2>
-
+     <section class="protected-content">
             <h3>Jour 1 : Jijel – Igzer Ouftis, 140 kms, 6 h de trajet</h3>
             <p>Nous quittons la cote jijelienne pour nous enfoncer dans le massif des Babors à travers des petites routes et pistes sinueuses.</p>
             <p>Toute une paysannerie dense et active s'accroche à ses terres dans cet environnement pentu et enclavé ou chênes, oliviers, noyers poussent sur les flancs des montagnes couvertes d'une luxuriante végétation.</p>
@@ -565,7 +755,7 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
             <p> Après avoir suivi une route sinueuse en hauteur de la vallée de l'oued Agrioun et ponctuée de villages nous débouchons sur la mer.</p>
             <p> Sur plusieurs kilomètres nous suivons cette route en bord de mer qui a été entaillée dans les flancs de la montagne offrant un paysage unique.</p>
             <p> Diner et nuit dans une ferme de la campagne jijelienne.</p>
-                
+     </section>           
 </div>
 </section>
 </main>
@@ -668,7 +858,24 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
 
 </main>
 
-<footer id="contact"><div class="container"><div class="footer-grid"><div><h3>Algeria Epic Tracks</h3><p>Le guide du voyage à moto en Algérie par les plus belles routes et pistes.</p></div><div><h3>Navigation</h3><ul><li><a href="#accueil">Accueil</a></li><li><a href="#equipe">Notre équipe</a></li><li><a href="#pistes">Pistes moto</a></li><li><a href="#routes">Routes moto</a></li></ul></div><div><h3>Contact</h3><ul><li>📧 contact@algeriaepictracks.com</li><li>📞 +33 6 00 00 00 00</li><li>🌎 France / Algérie</li></ul></div></div><div class="footer-bottom">© 2026 Algeria Epic Tracks — Tous droits réservés</div></div></footer>
+<footer id="contact">
+<div class="container">
+<div class="footer-grid"><div><h3>Algeria Epic Tracks</h3><p>Le guide du voyage à moto en Algérie par les plus belles routes et pistes.</p></div><div><h3>Navigation</h3><ul><li><a href="#accueil">Accueil</a></li><li><a href="#equipe">Notre équipe</a></li><li><a href="#pistes">Pistes moto</a></li><li><a href="#routes">Routes moto</a></li></ul></div><div><h3>Contact</h3>
+<ul>
+
+<li>📧 contact@algeria-epic-tracks.com</li>
+<!-- <li>📞 +33 6 00 00 00 00</li><li>🌎 France / Algérie -->
+
+<span><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+             alt="WhatsApp"
+             style="width:20px; height:20px; vertical-align:middle;"> Algérie Whatsapp: +213 5 62 34 44 72
+    <br>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+             alt="WhatsApp"
+             style="width:20px; height:20px; vertical-align:middle;"> France Whatsapp: +33 6 28 03 65 24</span>
+
+</li>
+</ul></div></div><div class="footer-bottom">© 2026 Algeria Epic Tracks — Tous droits réservés</div></div></footer>
 
 <script>
 /* Carrousel de la page d'accueil */
@@ -676,5 +883,25 @@ footer{background:var(--blue);color:#fff;padding:45px 0 20px} .footer-grid{displ
 /* Navigation entre l'accueil, les pages listes et les fiches circuits */
 (function(){const home=[...document.querySelectorAll('.home-section')],pages=[...document.querySelectorAll('.route-page')],top=document.getElementById('site-top');function render(){const id=decodeURIComponent(location.hash.slice(1))||'accueil';const page=pages.find(p=>p.id===id);pages.forEach(p=>p.classList.toggle('show',p===page));home.forEach(s=>s.style.display=page?'none':'');document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));document.body.style.paddingTop=top.offsetHeight+'px';window.scrollTo(0,0)}document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const href=a.getAttribute('href');if(!href||href==='#')return;if(document.getElementById(href.slice(1))){e.preventDefault();if(location.hash===href)render();else location.hash=href}});window.addEventListener('hashchange',render);window.addEventListener('popstate',render);window.addEventListener('resize',()=>document.body.style.paddingTop=top.offsetHeight+'px');pages.forEach(pg=>pg.querySelectorAll('.route-tabs button').forEach(b=>b.addEventListener('click',()=>{pg.querySelectorAll('.route-tabs button').forEach(x=>x.classList.toggle('active',x===b));pg.querySelectorAll('.route-panel').forEach(p=>p.classList.toggle('active',p.dataset.panel===b.dataset.tab))})));render()})();
 </script>
+<script>
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.closest('img')) {
+        e.preventDefault();
+    }
+});
+</script>
+
+<script>
+document.querySelectorAll('img').forEach(function(img) {
+    img.setAttribute('draggable', 'false');
+});
+
+document.addEventListener('dragstart', function(e) {
+    if (e.target.closest('img')) {
+        e.preventDefault();
+    }
+});
+</script>
+
 </body>
 </html>
